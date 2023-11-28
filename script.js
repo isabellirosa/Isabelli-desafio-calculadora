@@ -14,7 +14,12 @@ function add_operador(opr){
 }
 function total() {
     document.querySelector("#history").innerHTML=input.value;
-    let resultado=input.value
+    let resultado=input.value;
     input.value=eval(resultado);
     
+}
+function raiz_quadrada(){
+    document.querySelector("#history").innerHTML=input.value;
+    let resultado=input.value;
+    input.value=Math.sqrt(resultado);
 }
