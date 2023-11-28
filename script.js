@@ -1,18 +1,20 @@
-let input = document.querySelector("#display")
-let numero=document.querySelector(".button");
-let operacao=document.getElementById(".button gray")
+let input = document.querySelector("#display");
 function limpar(){
-
+    document.querySelector("#history").innerHTML="";
+    input.value="";
+    operador="";
 }
 function add_numero(numero) {
-    let calculo="";
-    calculo+=numero
-    document.querySelector("#history").innerHTML = calculo;
+    let operacao=input.value;
+    input.value=operacao+=numero;
 }
-function add_operador(operador){
-    calculo+=operador
-    document.querySelector("#history").innerHTML = calculo;
+function add_operador(opr){
+        let operacao=input.value;
+        input.value=operacao+=opr;
 }
 function total() {
+    document.querySelector("#history").innerHTML=input.value;
+    let resultado=input.value
+    input.value=eval(resultado);
     
 }
