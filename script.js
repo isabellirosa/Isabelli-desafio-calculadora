@@ -1,6 +1,5 @@
 let input = document.querySelector("#display");
 function limpar(){
-    document.querySelector("#history").innerHTML="";
     input.value="";
     operador="";
 }
@@ -12,6 +11,19 @@ function add_operador(opr){
         let operacao=input.value;
         input.value=operacao+=opr;
 }
+
+document.addEventListener('keydown', function (event){
+    console.log(event.key)
+    if (!isNaN(event.key)|| event.key== "/"|| event.key=="*"||event.key =="+"|| event.key=="-"){
+        input.value = input.value + event.key;
+    }
+    if ( event.key== "="|| event.key=="Enter"){
+        total();
+    }
+    if(event.key == "Backspace"|| event.key == "delete" || event.key == "Escape"){
+        limpar();
+    }
+});
 function total() {
     document.querySelector("#history").innerHTML=input.value;
     let resultado=input.value;
