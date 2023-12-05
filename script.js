@@ -12,9 +12,14 @@ function add_operador(opr){
 }
 
 document.addEventListener('keydown', function (event){
-    console.log(event.key)
     if (!isNaN(event.key)|| event.key== "/"|| event.key=="*"||event.key =="+"|| event.key=="-"){
         input.value = input.value + event.key;
+    }
+    else if(event.key=="%"){
+        input.value = input.value + "/100";
+    }
+    else if(event.key=="^"){
+        input.value = input.value + "**";
     }
     if ( event.key== "="|| event.key=="Enter"){
         total();
