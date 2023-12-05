@@ -1,7 +1,6 @@
 let input = document.querySelector("#display");
 function limpar(){
     input.value="";
-    operador="";
 }
 function add_numero(numero) {
     let operacao=input.value;
