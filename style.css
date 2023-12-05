@@ -10,7 +10,7 @@ body{
    height: 40px; 
 }
 .calculator{
-    background-color: pink;
+    background-color: rgb(252, 197, 234);
     width: max-content;
     padding:20px;
     border-radius: 3%;
@@ -30,4 +30,7 @@ body{
 }
 .purple{
     width:165px;
+}
+.gray{
+    color: rgb(247, 95, 196);
 }
